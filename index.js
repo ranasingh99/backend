@@ -5,6 +5,7 @@ const rootDir = require('./util/path')
 
 const adminRoute = require("./routes/admin");
 const shopRoute = require("./routes/shop");
+const contactRoute = require("./routes/contact");
 
 
 
@@ -16,6 +17,10 @@ app.use(adminRoute);
 
 
 app.use(shopRoute);
+// app.use('/success',(req,res,next)=>{
+//     return res.send('<h1>Success</h1>');
+// })
+app.use(contactRoute);
 
 
 app.use((req,res,next)=>{
